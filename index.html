@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulario + Diccionario</title>
     <style>
         body {
             margin: 0;
@@ -21,19 +21,46 @@
         }
         iframe {
             width: 100%;
-            height: 900px;
             border: none;
+        }
+        .btn-diccionario {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #0078ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-diccionario:hover {
+            background: #005fcc;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+
+    <!-- BOTÓN QUE REDIRIGE -->
+    <a href="diccionario.html" class="btn-diccionario">Hola mundo</a>
+
     <h2>Formulario de Registro</h2>
 
-    <iframe src=https://forms.gle/HH6uTsW5pmd49y328>
+    <!-- FORMULARIO -->
+    <iframe 
+        src="https://docs.google.com/forms/d/e/TU_ID_DEL_FORMULARIO/viewform?embedded=true"
+        height="900">
         Cargando…
     </iframe>
+
+</div>
+
+</body>
+</html>
 </div>
 
 </body>
