@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caracterización Empresarial</title>
+    <title>Caracterización Empresarial – CAESCOL</title>
 
     <!-- Fuente Profesional -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <!-- Íconos Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -14,27 +15,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="page-animate light-mode">
+<body class="page-animate">
 
-    <!-- PANEL LATERAL (DASHBOARD) -->
+    <!-- PANEL LATERAL / DASHBOARD -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <span class="material-icons sidebar-logo-icon">dashboard</span>
             <span class="sidebar-title">Panel CAESCOL</span>
         </div>
+
         <nav class="sidebar-nav">
             <a href="#form1" class="sidebar-link">
-                <span class="material-icons">assignment</span>
+                <span class="material-icons">assignment</span>  
                 <span>Caracterización Empresarial</span>
             </a>
+
             <a href="#form2" class="sidebar-link">
                 <span class="material-icons">business</span>
                 <span>Información de la Compañía</span>
             </a>
+
             <a href="Glosario técnico.html" class="sidebar-link" target="_blank">
                 <span class="material-icons">menu_book</span>
                 <span>Glosario Técnico</span>
             </a>
+
             <a href="referencias.html" class="sidebar-link" target="_blank">
                 <span class="material-icons">description</span>
                 <span>Referencias Citadas</span>
@@ -42,20 +47,24 @@
         </nav>
     </aside>
 
-    <!-- Overlay para cuando el panel está abierto en móvil -->
+    <!-- OVERLAY MOBILE -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- MENÚ SUPERIOR -->
+
+    <!-- NAVBAR SUPERIOR -->
     <div class="navbar">
         <div class="navbar-left">
-            <button class="icon-button" id="sidebarToggle" aria-label="Abrir panel lateral">
+            <button class="icon-button" id="sidebarToggle" aria-label="Menú">
                 <span class="material-icons">menu</span>
             </button>
+
             <span class="navbar-title">Caracterización Empresarial – CAESCOL</span>
         </div>
 
+        <!-- SWITCH MODO OSCURO -->
         <div class="navbar-right">
             <span class="dark-mode-label">Modo oscuro</span>
+
             <label class="switch">
                 <input type="checkbox" id="darkModeToggle">
                 <span class="slider round"></span>
@@ -63,31 +72,31 @@
         </div>
     </div>
 
+
     <!-- CONTENIDO PRINCIPAL -->
     <div class="container">
 
-        <!-- ENCABEZADO CON LOGO Y GLOW -->
+        <!-- LOGO + TÍTULO -->
         <div class="header">
-            <!-- Cambia "tu-logo.png" por el nombre real del archivo -->
-            <img src="logo.png" class="logo-glow" alt="Logo CAESCOL">
+            <img src="logo.png" alt="Logo CAESCOL" class="logo-glow">
             <div class="header-title">Plataforma de Caracterización Empresarial</div>
-            <p className="header-subtitle">
-                Herramienta para recopilar y analizar información clave de empresas del sector.
-            </p>
         </div>
 
-        <!-- BOTONES CON ICONOS -->
+        <!-- BOTONES GLASS -->
         <div class="button-grid">
+
             <a href="Glosario técnico.html" class="btn-custom" target="_blank">
                 <span class="material-icons btn-icon">menu_book</span>
-                <span>Glosario Técnico – Industria Aeronáutica, Espacial y Defensa (ASD)</span>
+                Glosario Técnico – Industria Aeronáutica, Espacial y Defensa (ASD)
             </a>
 
             <a href="referencias.html" class="btn-custom" target="_blank">
                 <span class="material-icons btn-icon">description</span>
-                <span>Referencias Citadas</span>
+                Referencias Citadas
             </a>
+
         </div>
+
 
         <!-- INTRODUCCIÓN FORMULARIO 1 -->
         <div class="texto-intro">
@@ -96,27 +105,30 @@
 
         <h2 id="form1">Formulario de Caracterización Empresarial</h2>
 
-        <!-- FORMULARIO 1 (con animación al hover) -->
+        <!-- FORMULARIO 1 -->
         <div class="form-wrapper">
             <iframe 
-                src="https://forms.gle/BDFAvK5zxRSs324s9" 
-                height="900" 
+                src="https://forms.gle/BDFAvK5zxRSs324s9"
+                height="900"
                 class="form-frame">
             </iframe>
         </div>
 
+
         <hr class="divider">
 
+
+        <!-- INTRODUCCIÓN FORMULARIO 2 -->
         <div class="texto-intro">
-            Una vez finalizado el formulario anterior, continúe con la siguiente sección, donde se recopila información detallada sobre la estructura, actividad económica y características clave de su empresa.
+            Una vez finalinado el formulario anterior, continúe con la siguiente sección, donde se recopila información sobre la estructura, actividad económica y características clave de su empresa.
         </div>
 
         <h2 id="form2">Información General de la Compañía</h2>
 
-        <!-- FORMULARIO 2 (con animación al hover) -->
+        <!-- FORMULARIO 2 -->
         <div class="form-wrapper">
             <iframe 
-                src="https://forms.gle/6cCAGiKLRnpyWWC8A" 
+                src="https://forms.gle/6cCAGiKLRnpyWWC8A"
                 height="900"
                 class="form-frame">
             </iframe>
@@ -124,12 +136,15 @@
 
     </div>
 
-    <!-- PIE DE PÁGINA -->
+
+    <!-- FOOTER -->
     <div class="footer">
-        © 2025 – CAESCOL | Plataforma de Caracterización Empresarial – Todos los derechos reservados.
+        © 2025 – CAESCOL | Plataforma de Caracterización Empresarial  
     </div>
 
-    <!-- JS externo -->
+
+    <!-- SCRIPT EXTERNO -->
     <script src="script.js"></script>
+
 </body>
 </html>
