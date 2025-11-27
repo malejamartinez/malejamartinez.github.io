@@ -1,15 +1,32 @@
 :root {
-    --azul-primario: #0066cc;
-    --azul-hover: #004999;
+    /* AZUL PRIMARIO OSCURO (corporativo) */
+    --azul-primario: #003366;
+
+    /* HOVER MÁS OSCURO */
+    --azul-hover: #00264d;
+
+    /* AZUL TRANSPARENTE tipo GLASS */
+    --azul-transparente: rgba(0, 102, 204, 0.35);
+
+    /* COLORES DE TEXTO */
     --texto: #333;
-    --fondo-gradiente-inicio: #0066cc;
-    --fondo-gradiente-fin: #003f7f;
-    --container-bg: #ffffff;
-    --container-shadow: rgba(0, 0, 0, 0.2);
-    --navbar-bg: #ffffff;
-    --navbar-shadow: rgba(0, 0, 0, 0.15);
-    --footer-text: #ffffff;
-    --divider-color: #dddddd;
+
+    /* DEGRADADO CORPORATIVO */
+    --fondo-gradiente-inicio: rgba(0, 51, 102, 0.8); /* azul oscuro semitransparente */
+    --fondo-gradiente-fin: rgba(0, 25, 51, 0.85);   /* azul negro */
+
+    /* CONTENEDORES */
+    --container-bg: rgba(255, 255, 255, 0.92); /* efecto vidrio suave */
+    --container-shadow: rgba(0, 0, 0, 0.25);
+
+    /* NAVBAR */
+    --navbar-bg: rgba(255, 255, 255, 0.80);
+    --navbar-shadow: rgba(0, 0, 0, 0.25);
+
+    /* PIE DE PÁGINA */
+    --footer-text: #e0e6f3;
+
+    --divider-color: rgba(255, 255, 255, 0.18);
 }
 
 /* MODO OSCURO: override variables */
