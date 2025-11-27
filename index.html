@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario + Diccionario</title>
+    <title>Formulario + Glosario + Referencias</title>
     <style>
         body {
             margin: 0;
@@ -24,9 +24,9 @@
             border: none;
         }
         .btn-diccionario {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 20px;
+            display: block;
+            margin-bottom: 15px;
+            padding: 12px 20px;
             background: #0078ff;
             color: white;
             border: none;
@@ -35,6 +35,7 @@
             font-weight: bold;
             font-size: 16px;
             cursor: pointer;
+            text-align: center;
         }
         .btn-diccionario:hover {
             background: #005fcc;
@@ -51,8 +52,20 @@
 
 <div class="container">
 
-    <!-- BOTÓN QUE REDIRIGE -->
-    <a href="Glosario técnico.html" class="btn-Glosario técnico">Glosario técnico, Espacial y Defensa (ASD)</a>
+    <!-- BOTÓN 1: GLOSARIO (FUNCIONA, ARCHIVO EXISTE) -->
+    <a href="Glosario técnico.html" class="btn-diccionario">
+        Glosario Técnico – Industria Aeronáutica, Espacial y Defensa (ASD)
+    </a>
+
+    <!-- BOTÓN 2: REFERENCIAS -->
+    <a href="referencias.html" class="btn-diccionario">
+        Referencias Citadas
+    </a>
+
+    <!-- INTRODUCCIÓN ANTES DEL FORMULARIO 1 -->
+    <div class="texto-intro">
+        Para comenzar, por favor diligencie el siguiente formulario, donde se recopila la información general necesaria para continuar con el proceso de caracterización empresarial.
+    </div>
 
     <h2>Formulario de Registro</h2>
 
