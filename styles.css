@@ -1,22 +1,26 @@
+/* ================================
+   VARIABLES DE COLOR (MODERNIZADAS)
+   ================================ */
+
 :root {
-    /* AZUL PRIMARIO OSCURO (corporativo) */
+    /* AZUL PRIMARIO OSCURO */
     --azul-primario: #003366;
 
-    /* HOVER MÁS OSCURO */
+    /* AZUL MÁS OSCURO PARA HOVER */
     --azul-hover: #00264d;
 
-    /* AZUL TRANSPARENTE tipo GLASS */
+    /* AZUL TRANSPARENTE GLASS */
     --azul-transparente: rgba(0, 102, 204, 0.35);
 
-    /* COLORES DE TEXTO */
+    /* COLOR DE TEXTO */
     --texto: #333;
 
-    /* DEGRADADO CORPORATIVO */
-    --fondo-gradiente-inicio: rgba(0, 51, 102, 0.8); /* azul oscuro semitransparente */
-    --fondo-gradiente-fin: rgba(0, 25, 51, 0.85);   /* azul negro */
+    /* FONDO EN DEGRADADO AZUL OSCURO GLASS */
+    --fondo-gradiente-inicio: rgba(0, 51, 102, 0.85);
+    --fondo-gradiente-fin: rgba(0, 25, 51, 0.92);
 
-    /* CONTENEDORES */
-    --container-bg: rgba(255, 255, 255, 0.92); /* efecto vidrio suave */
+    /* EFECTO GLASS PARA CONTENEDORES */
+    --container-bg: rgba(255, 255, 255, 0.90);
     --container-shadow: rgba(0, 0, 0, 0.25);
 
     /* NAVBAR */
@@ -24,61 +28,61 @@
     --navbar-shadow: rgba(0, 0, 0, 0.25);
 
     /* PIE DE PÁGINA */
-    --footer-text: #e0e6f3;
+    --footer-text: #ffffff;
 
-    --divider-color: rgba(255, 255, 255, 0.18);
+    --divider-color: rgba(255,255,255,0.25);
 }
 
-/* MODO OSCURO: override variables */
+/* ==========================
+   MODO OSCURO (AZUL PETRÓLEO)
+   ========================== */
+
 body.dark-mode {
     --texto: #e5e7eb;
 
-    /* fondo dark azul petróleo */
     --fondo-gradiente-inicio: #000a14;
     --fondo-gradiente-fin: #001122;
 
-    /* contenedores glass dark */
-    --container-bg: rgba(10, 15, 25, 0.65);
-    --container-shadow: rgba(0, 0, 0, 0.8);
+    --container-bg: rgba(10, 15, 25, 0.70);
+    --container-shadow: rgba(0, 0, 0, 0.7);
 
-    /* navbar glass dark */
-    --navbar-bg: rgba(20, 30, 50, 0.60);
-    --navbar-shadow: rgba(0, 0, 0, 0.9);
+    --navbar-bg: rgba(22, 33, 55, 0.60);
+    --navbar-shadow: rgba(0, 0, 0, 0.8);
 
     --footer-text: #cdd9ff;
-    --divider-color: rgba(255, 255, 255, 0.12);
+    --divider-color: rgba(255,255,255,0.15);
 }
 
-/* FONDO CON DEGRADADO CORPORATIVO */
+/* ==========================
+   FONDO Y ANIMACIÓN INICIAL
+   ========================== */
+
 body {
     margin: 0;
     background: linear-gradient(135deg, var(--fondo-gradiente-inicio), var(--fondo-gradiente-fin));
     font-family: 'Inter', sans-serif;
-    color: var(--texto);
     min-height: 100vh;
     padding: 20px;
+    color: var(--texto);
     transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* ANIMACIÓN SUAVE DE ENTRADA */
+/* Fade suave al cargar */
 .page-animate {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.9s ease-out forwards;
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-/* MENÚ SUPERIOR */
+/* ==========================
+   NAVBAR GLASS
+   ========================== */
+
 .navbar {
     background: var(--navbar-bg);
     padding: 12px 25px;
@@ -88,10 +92,13 @@ body {
     top: 15px;
     z-index: 900;
     margin-bottom: 25px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.4s ease, box-shadow 0.4s ease;
+
+    backdrop-filter: blur(8px);
+    transition: background 0.4s ease;
 }
 
 .navbar-left {
@@ -100,23 +107,13 @@ body {
     gap: 10px;
 }
 
-.navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .navbar-title {
     font-size: 18px;
     font-weight: 600;
     color: var(--azul-primario);
 }
 
-.dark-mode-label {
-    font-size: 14px;
-}
-
-/* BOTÓN ICONO (MENÚ) */
+/* Button icon */
 .icon-button {
     border: none;
     background: transparent;
@@ -125,19 +122,15 @@ body {
     align-items: center;
     padding: 6px;
     border-radius: 8px;
-    transition: background 0.2s ease;
 }
-
-.icon-button .material-icons {
-    font-size: 24px;
-    color: var(--azul-primario);
-}
-
 .icon-button:hover {
-    background: rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.1);
 }
 
-/* SWITCH MODO OSCURO */
+/* ==========================
+   SWITCH MODO OSCURO
+   ========================== */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -146,27 +139,25 @@ body {
 }
 .switch input {
     opacity: 0;
-    width: 0;
-    height: 0;
 }
 .slider {
     position: absolute;
-    cursor: pointer;
     inset: 0;
-    background-color: #ccc;
-    transition: .4s;
+    cursor: pointer;
+    background-color: #aaa;
     border-radius: 22px;
+    transition: .4s;
 }
 .slider:before {
-    position: absolute;
     content: "";
-    height: 16px;
-    width: 16px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
     left: 3px;
-    bottom: 3px;
+    bottom: 2px;
     background-color: white;
-    transition: .4s;
     border-radius: 50%;
+    transition: .4s;
 }
 input:checked + .slider {
     background-color: var(--azul-primario);
@@ -175,144 +166,23 @@ input:checked + .slider:before {
     transform: translateX(22px);
 }
 
-/* CONTENEDOR PRINCIPAL */
-.container {
-    max-width: 950px;
-    margin: auto;
-    background: var(--container-bg);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0px 6px 20px var(--container-shadow);
-    transition: background 0.4s ease, box-shadow 0.4s ease;
-}
+/* ==========================
+   PANEL LATERAL (DASHBOARD)
+   ========================== */
 
-/* ENCABEZADO + LOGO CON GLOW */
-.header {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.logo-glow {
-    max-width: 260px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 102, 204, 0.55);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo-glow:hover {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 0 28px rgba(0, 140, 255, 0.75);
-}
-
-.header-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 12px;
-    color: var(--azul-primario);
-}
-
-/* BOTONES CON ICONOS */
-.button-grid {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-.btn-custom {
-    flex: 1;
-    min-width: 260px;
-    padding: 14px;
-    background: var(--azul-primario);
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.btn-custom .btn-icon {
-    font-size: 20px;
-}
-
-.btn-custom:hover {
-    background: var(--azul-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* TEXTOS */
-.texto-intro {
-    margin: 20px 0;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* TÍTULOS DE SECCIÓN */
-h2 {
-    margin-top: 20px;
-    color: var(--azul-primario);
-    font-weight: 700;
-}
-
-/* FORM WRAPPER con animación hover */
-.form-wrapper {
-    margin-top: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px;
-}
-
-.form-frame {
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    background: #f8f8f8;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-wrapper:hover .form-frame {
-    transform: translateY(-4px) scale(1.01);
-    box-shadow: 0 10px 26px rgba(0,0,0,0.25);
-}
-
-/* DIVISOR */
-.divider {
-    margin: 40px 0;
-    border: none;
-    border-top: 1px solid var(--divider-color);
-}
-
-/* PIE DE PÁGINA */
-.footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 20px;
-    font-size: 14px;
-    color: var(--footer-text);
-    opacity: 0.9;
-}
-
-/* SIDEBAR / PANEL LATERAL */
 .sidebar {
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     width: 260px;
     height: 100%;
-    background: #020617;
+    background: #001a33;
     color: #e5e7eb;
+    padding-top: 20px;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
     z-index: 950;
     box-shadow: 4px 0 16px rgba(0,0,0,0.6);
-    padding-top: 15px;
 }
 
 body.sidebar-open .sidebar {
@@ -320,79 +190,166 @@ body.sidebar-open .sidebar {
 }
 
 .sidebar-header {
+    padding: 15px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 0 16px 16px 16px;
-    border-bottom: 1px solid #1f2937;
-    margin-bottom: 10px;
-}
-
-.sidebar-logo-icon {
-    font-size: 26px;
-    color: #38bdf8;
-}
-
-.sidebar-title {
-    font-size: 16px;
+    gap: 12px;
     font-weight: 600;
+    color: #66aaff;
 }
 
 .sidebar-nav {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    padding: 0 8px;
 }
 
 .sidebar-link {
+    padding: 12px 15px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 10px;
-    color: #e5e7eb;
+    gap: 12px;
+    color: #e8ecff;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 14px;
-    margin: 2px 0;
-    transition: background 0.2s ease, transform 0.2s ease;
 }
-
-.sidebar-link .material-icons {
-    font-size: 20px;
-}
-
 .sidebar-link:hover {
-    background: #1f2937;
-    transform: translateX(2px);
+    background: rgba(255,255,255,0.1);
 }
 
-/* OVERLAY para móvil */
+/* Overlay móvil */
 .sidebar-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(15,23,42,0.5);
+    background: rgba(0,0,0,0.45);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+    transition: 0.25s;
     z-index: 940;
 }
-
 body.sidebar-open .sidebar-overlay {
     opacity: 1;
     visibility: visible;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px 15px;
-    }
+/* ==========================
+   CONTENEDOR GLASS EFFECT
+   ========================== */
 
-    .navbar-title {
-        font-size: 16px;
-    }
+.container {
+    max-width: 950px;
+    margin: auto;
+    background: var(--container-bg);
+    padding: 25px;
+    border-radius: 15px;
 
-    .container {
-        padding: 18px;
-    }
+    box-shadow: 0px 6px 20px var(--container-shadow);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+
+    transition: background 0.4s ease;
+}
+
+/* ==========================
+   LOGO CON GLOW
+   ========================== */
+
+.logo-glow {
+    max-width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 51, 102, 0.55);
+    transition: 0.3s ease;
+}
+.logo-glow:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 51, 102, 0.8);
+}
+
+/* ==========================
+   BOTONES GLASS
+   ========================== */
+
+.button-grid {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-custom {
+    flex: 1;
+    min-width: 260px;
+    padding: 14px;
+    background: var(--azul-transparente);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+.btn-custom:hover {
+    background: rgba(0, 102, 204, 0.55);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* ==========================
+   FORMULARIOS (IFRAMES)
+   ========================== */
+
+.form-wrapper {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.form-frame {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: rgba(240, 240, 240, 0.8);
+    transition: 0.3s ease;
+}
+
+/* Animación hover */
+.form-wrapper:hover .form-frame {
+    transform: scale(1.01) translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+
+/* ==========================
+   CIERRA SECCIONES
+   ========================== */
+
+.texto-intro {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h2 {
+    color: var(--azul-primario);
+    font-weight: 700;
+}
+
+.divider {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid var(--divider-color);
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    color: var(--footer-text);
+    margin-top: 30px;
 }
