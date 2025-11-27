@@ -15,6 +15,10 @@
     /* COLOR DE TEXTO */
     --texto: #333;
 
+    /* COLORES PARA TÍTULOS */
+    --titulo-light: var(--azul-primario); /* modo claro */
+    --titulo-dark: #66aaff; /* azul claro visible en modo oscuro */
+
     /* FONDO EN DEGRADADO AZUL OSCURO GLASS */
     --fondo-gradiente-inicio: rgba(0, 51, 102, 0.85);
     --fondo-gradiente-fin: rgba(0, 25, 51, 0.92);
@@ -39,6 +43,8 @@
 
 body.dark-mode {
     --texto: #e5e7eb;
+
+    --titulo-light: var(--titulo-dark); /* azul claro luminoso */
 
     --fondo-gradiente-inicio: #000a14;
     --fondo-gradiente-fin: #001122;
@@ -110,10 +116,10 @@ body {
 .navbar-title {
     font-size: 18px;
     font-weight: 600;
-    color: var(--azul-primario);
+    color: var(--titulo-light);
 }
 
-/* Button icon */
+/* Botón icono */
 .icon-button {
     border: none;
     background: transparent;
@@ -301,6 +307,22 @@ body.sidebar-open .sidebar-overlay {
 }
 
 /* ==========================
+   TÍTULOS (CORREGIDOS)
+   ========================== */
+
+h2 {
+    color: var(--titulo-light);
+    font-weight: 700;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--titulo-light);
+    margin-top: 12px;
+}
+
+/* ==========================
    FORMULARIOS (IFRAMES)
    ========================== */
 
@@ -323,17 +345,12 @@ body.sidebar-open .sidebar-overlay {
 }
 
 /* ==========================
-   CIERRA SECCIONES
+   TEXTOS Y DIVISORES
    ========================== */
 
 .texto-intro {
     font-size: 16px;
     line-height: 1.6;
-}
-
-h2 {
-    color: var(--azul-primario);
-    font-weight: 700;
 }
 
 .divider {
