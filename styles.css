@@ -32,14 +32,21 @@
 /* MODO OSCURO: override variables */
 body.dark-mode {
     --texto: #e5e7eb;
-    --fondo-gradiente-inicio: #020617;
-    --fondo-gradiente-fin: #0f172a;
-    --container-bg: #0b1120;
-    --container-shadow: rgba(0, 0, 0, 0.7);
-    --navbar-bg: #020617;
-    --navbar-shadow: rgba(0, 0, 0, 0.8);
-    --footer-text: #cbd5f5;
-    --divider-color: #1f2937;
+
+    /* fondo dark azul petróleo */
+    --fondo-gradiente-inicio: #000a14;
+    --fondo-gradiente-fin: #001122;
+
+    /* contenedores glass dark */
+    --container-bg: rgba(10, 15, 25, 0.65);
+    --container-shadow: rgba(0, 0, 0, 0.8);
+
+    /* navbar glass dark */
+    --navbar-bg: rgba(20, 30, 50, 0.60);
+    --navbar-shadow: rgba(0, 0, 0, 0.9);
+
+    --footer-text: #cdd9ff;
+    --divider-color: rgba(255, 255, 255, 0.12);
 }
 
 /* FONDO CON DEGRADADO CORPORATIVO */
