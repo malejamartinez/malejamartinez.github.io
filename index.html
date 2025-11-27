@@ -3,96 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario + Glosario + Referencias</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        iframe {
-            width: 100%;
-            border: none;
-        }
-        .btn-diccionario {
-            display: block;
-            margin-bottom: 15px;
-            padding: 12px 20px;
-            background: #0078ff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .btn-diccionario:hover {
-            background: #005fcc;
-        }
-        .texto-intro {
-            margin: 20px 0;
-            font-size: 17px;
-            line-height: 1.5;
-            color: #333;
-        }
-    </style>
+    <title>Caracterización Empresarial</title>
+
+    <!-- Fuente Profesional -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Íconos Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<div class="container">
+<body class="page-animate light-mode">
 
-    <!-- BOTÓN 1: GLOSARIO (FUNCIONA, ARCHIVO EXISTE) -->
-    <a href="Glosario técnico.html" class="btn-diccionario">
-        Glosario Técnico – Industria Aeronáutica, Espacial y Defensa (ASD)
-    </a>
+    <!-- PANEL LATERAL (DASHBOARD) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="material-icons sidebar-logo-icon">dashboard</span>
+            <span class="sidebar-title">Panel CAESCOL</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#form1" class="sidebar-link">
+                <span class="material-icons">assignment</span>
+                <span>Caracterización Empresarial</span>
+            </a>
+            <a href="#form2" class="sidebar-link">
+                <span class="material-icons">business</span>
+                <span>Información de la Compañía</span>
+            </a>
+            <a href="Glosario técnico.html" class="sidebar-link" target="_blank">
+                <span class="material-icons">menu_book</span>
+                <span>Glosario Técnico</span>
+            </a>
+            <a href="referencias.html" class="sidebar-link" target="_blank">
+                <span class="material-icons">description</span>
+                <span>Referencias Citadas</span>
+            </a>
+        </nav>
+    </aside>
 
-    <!-- BOTÓN 2: REFERENCIAS -->
-    <a href="referencias.html" class="btn-diccionario">
-        Referencias Citadas
-    </a>
+    <!-- Overlay para cuando el panel está abierto en móvil -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- INTRODUCCIÓN ANTES DEL FORMULARIO 1 -->
-    <div class="texto-intro">
-        Para comenzar, por favor diligencie el siguiente formulario, donde se recopila la información general necesaria para continuar con el proceso de caracterización empresarial.
+    <!-- MENÚ SUPERIOR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <button class="icon-button" id="sidebarToggle" aria-label="Abrir panel lateral">
+                <span class="material-icons">menu</span>
+            </button>
+            <span class="navbar-title">Caracterización Empresarial – CAESCOL</span>
+        </div>
+
+        <div class="navbar-right">
+            <span class="dark-mode-label">Modo oscuro</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
     </div>
 
-    <h2>Formulario de Registro</h2>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
 
-    <!-- FORMULARIO 1 -->
-    <iframe 
-        src="https://forms.gle/BDFAvK5zxRSs324s9"
-        height="900">
-        Cargando…
-    </iframe>
+        <!-- ENCABEZADO CON LOGO Y GLOW -->
+        <div class="header">
+            <!-- Cambia "tu-logo.png" por el nombre real del archivo -->
+            <img src="tu-logo.png" alt="Logo CAESCOL" class="logo-glow">
+            <div class="header-title">Plataforma de Caracterización Empresarial</div>
+            <p className="header-subtitle">
+                Herramienta para recopilar y analizar información clave de empresas del sector.
+            </p>
+        </div>
 
-    <hr style="margin: 40px 0;">
+        <!-- BOTONES CON ICONOS -->
+        <div class="button-grid">
+            <a href="Glosario técnico.html" class="btn-custom" target="_blank">
+                <span class="material-icons btn-icon">menu_book</span>
+                <span>Glosario Técnico – Industria Aeronáutica, Espacial y Defensa (ASD)</span>
+            </a>
 
-    <div class="texto-intro">
-        Luego de diligenciar el formulario anterior, queremos recopilar datos básicos de identificación, tamaño y actividad económica de la empresa.  
-        Por ello, le invitamos a completar el siguiente formulario.
+            <a href="referencias.html" class="btn-custom" target="_blank">
+                <span class="material-icons btn-icon">description</span>
+                <span>Referencias Citadas</span>
+            </a>
+        </div>
+
+        <!-- INTRODUCCIÓN FORMULARIO 1 -->
+        <div class="texto-intro">
+            Para comenzar, por favor diligencie el siguiente formulario, donde se recopila información general necesaria para avanzar en el proceso de caracterización empresarial.
+        </div>
+
+        <h2 id="form1">Formulario de Caracterización Empresarial</h2>
+
+        <!-- FORMULARIO 1 (con animación al hover) -->
+        <div class="form-wrapper">
+            <iframe 
+                src="https://forms.gle/BDFAvK5zxRSs324s9" 
+                height="900" 
+                class="form-frame">
+            </iframe>
+        </div>
+
+        <hr class="divider">
+
+        <div class="texto-intro">
+            Una vez finalizado el formulario anterior, continúe con la siguiente sección, donde se recopila información detallada sobre la estructura, actividad económica y características clave de su empresa.
+        </div>
+
+        <h2 id="form2">Información General de la Compañía</h2>
+
+        <!-- FORMULARIO 2 (con animación al hover) -->
+        <div class="form-wrapper">
+            <iframe 
+                src="https://forms.gle/6cCAGiKLRnpyWWC8A" 
+                height="900"
+                class="form-frame">
+            </iframe>
+        </div>
+
     </div>
 
-    <h2>Formulario de Caracterización Empresarial</h2>
+    <!-- PIE DE PÁGINA -->
+    <div class="footer">
+        © 2025 – CAESCOL | Plataforma de Caracterización Empresarial – Todos los derechos reservados.
+    </div>
 
-    <!-- FORMULARIO 2 -->
-    <iframe 
-        src="https://forms.gle/6cCAGiKLRnpyWWC8A" 
-        height="900">
-        Cargando…
-    </iframe>
-
-</div>
-
+    <!-- JS externo -->
+    <script src="script.js"></script>
 </body>
 </html>
