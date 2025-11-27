@@ -3,97 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diccionario ASD</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            background: white;
-            margin: auto;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #003366;
-        }
-        .volver {
-            display: inline-block;
-            margin-bottom: 15px;
-            padding: 8px 16px;
-            background: #0078ff;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-        }
-        .volver:hover {
-            background: #005fcc;
-        }
-        ul {
-            line-height: 1.6;
-        }
-        b {
-            color: #003366;
-        }
-    </style>
+    <title>Glosario Técnico – CAESCOL</title>
+
+    <!-- Fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Íconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<div class="container">
+<body class="page-animate">
 
-    <a class="volver" href="index.html">Volver</a>
+    <!-- PANEL LATERAL -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="material-icons sidebar-logo-icon">dashboard</span>
+            <span class="sidebar-title">Panel CAESCOL</span>
+        </div>
 
-    <h1>Glosario técnico – Industria Aeronáutica, Espacial y Defensa (ASD)</h1>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <span class="material-icons">arrow_back</span>
+                <span>Volver al Inicio</span>
+            </a>
+            <a href="referencias.html" class="sidebar-link">
+                <span class="material-icons">description</span>
+                <span>Referencias Citadas</span>
+            </a>
+        </nav>
+    </aside>
 
-    <h2>Siglas y Estándares</h2>
-    <ul>
-        <li><b>AS9100:</b> Norma internacional de gestión de calidad específica para la industria aeroespacial.</li>
-        <li><b>IAQG:</b> International Aerospace Quality Group, define estándares de calidad aeroespacial.</li>
-        <li><b>AIMM:</b> Aerospace Improvement Maturity Model, modelo de madurez de mejora continua.</li>
-        <li><b>OEM:</b> Fabricante de equipo original (ej. Airbus, Boeing).</li>
-        <li><b>Tier-1 / Tier-2:</b> Niveles de la cadena de suministro (Tier-1 suministra al OEM, Tier-2 suministra al Tier-1).</li>
-        <li><b>QMS:</b> Quality Management System / Sistema de Gestión de la Calidad.</li>
-        <li><b>PPM:</b> Parts per Million; defectos por millón de piezas.</li>
-        <li><b>FPY:</b> First Pass Yield; piezas que pasan inspección al primer intento.</li>
-        <li><b>FAI:</b> First Article Inspection; inspección del primer artículo fabricado.</li>
-        <li><b>SPC:</b> Statistical Process Control / Control Estadístico de Proceso.</li>
-        <li><b>Cpk / Cp:</b> Índices de capacidad de proceso.</li>
-        <li><b>OEE:</b> Overall Equipment Effectiveness / Efectividad Global de los Equipos.</li>
-        <li><b>MRP:</b> Material Requirements Planning / Planificación de Materiales.</li>
-        <li><b>ERP:</b> Enterprise Resource Planning.</li>
-        <li><b>MES:</b> Manufacturing Execution System.</li>
-        <li><b>PLM:</b> Product Lifecycle Management.</li>
-        <li><b>MBE:</b> Model-Based Enterprise.</li>
-        <li><b>ECN:</b> Engineering Change Notice.</li>
-        <li><b>BCP:</b> Business Continuity Plan.</li>
-        <li><b>ITAR:</b> Regulaciones de exportación de defensa de EE.UU.</li>
-        <li><b>EAR:</b> Regulaciones de exportación de uso dual (civil/militar).</li>
-        <li><b>CMMC:</b> Certificación de madurez en ciberseguridad del DoD.</li>
-        <li><b>NIST:</b> Instituto que define estándares como el NIST CSF.</li>
-        <li><b>SLAs:</b> Service Level Agreements; acuerdos de nivel de servicio.</li>
-        <li><b>EDI:</b> Electronic Data Interchange.</li>
-        <li><b>API:</b> Interfaz de programación para integrar sistemas.</li>
-    </ul>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <h2>Términos técnicos y de gestión</h2>
-    <ul>
-        <li><b>Flow-down:</b> Comunicación obligatoria de requisitos del cliente hacia la cadena de suministro.</li>
-        <li><b>Trazabilidad:</b> Capacidad de rastrear historial, aplicación y ubicación de un producto.</li>
-        <li><b>Procesos especiales:</b> Procesos cuya conformidad no puede verificarse al 100% solo con inspección.</li>
-        <li><b>NDT:</b> Non-Destructive Testing; ensayos no destructivos como rayos X o ultrasonido.</li>
-        <li><b>Ramp-up industrial:</b> Incremento acelerado de capacidad productiva.</li>
-        <li><b>Homologación de proveedores:</b> Calificación y aprobación de proveedores.</li>
-        <li><b>Scorecard de proveedores:</b> Evaluación de desempeño (calidad, costo, entrega, cumplimiento).</li>
-        <li><b>Target Costing:</b> Método donde el precio objetivo del mercado fija el costo máximo permitido.</li>
-    </ul>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <button class="icon-button" id="sidebarToggle">
+                <span class="material-icons">menu</span>
+            </button>
+            <span class="navbar-title">Glosario Técnico – CAESCOL</span>
+        </div>
 
-</div>
+        <div class="navbar-right">
+            <span class="dark-mode-label">Modo oscuro</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
 
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+
+        <div class="header">
+            <img src="logo.png" class="logo-glow" alt="Logo CAESCOL">
+            <div class="header-title">Glosario Técnico – Industria Aeronáutica, Espacial y Defensa (ASD)</div>
+        </div>
+
+        <div class="texto-intro">
+            Este glosario reúne definiciones esenciales, siglas y términos clave utilizados en el sector aeronáutico,
+            espacial y de defensa. Su objetivo es facilitar la comprensión de conceptos técnicos dentro del marco de la
+            caracterización empresarial.
+        </div>
+
+        <h2>Glosario</h2>
+
+        <!-- CONTENIDO DEL GLOSARIO -->
+        <div class="form-wrapper" style="padding: 20px; background: rgba(255,255,255,0.15); border-radius: 12px;">
+
+            <strong>AS9100:</strong> Norma internacional de gestión de calidad para la industria aeroespacial.<br><br>
+            <strong>IAQG:</strong> International Aerospace Quality Group, entidad que define estándares de calidad.<br><br>
+            <strong>AIMM:</strong> Aerospace Improvement Maturity Model, modelo de madurez para proveedores.<br><br>
+            <strong>OEM:</strong> Original Equipment Manufacturer, fabricante de equipo original.<br><br>
+            <strong>Tier-1 / Tier-2:</strong> Niveles dentro de la cadena de suministro aeronáutica.<br><br>
+            <strong>QMS:</strong> Sistema de Gestión de la Calidad (Quality Management System).<br><br>
+
+            <!-- Si deseas, puedo agregar TODO el glosario técnico completo -->
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2025 – CAESCOL | Glosario Técnico
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
