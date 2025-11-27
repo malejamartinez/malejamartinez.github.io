@@ -3,68 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Referencias Citadas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        p {
-            margin: 10px 0;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-    </style>
+    <title>Referencias Citadas – CAESCOL</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<div class="container">
-    <h1>Referencias Citadas</h1>
+<body class="page-animate">
 
-<p>Airbus. (2023). <i>Supplier Quality Improvement Program (SQIP): Supplier performance and capability framework</i>. Airbus Operations SAS.</p>
-<p>Accenture. (2022). <i>A&D supply chain maturity and resilience model</i>. Accenture Strategy.</p>
-<p>Aerospace Industries Association. (2021). <i>Supplier capability guidelines and industrial base evaluation</i>. AIA.</p>
-<p>Aéro Montréal. (2022). <i>Supplier Development Program: Capability assessment tools</i>. Aéro Montréal.</p>
-<p>Boeing. (2022). <i>Supplier Performance Measurement System (SPMS): Supplier capability and risk assessment guidelines</i>. The Boeing Company.</p>
-<p>Carnegie Mellon University. (2020). <i>CMMI V3.0: Capability Maturity Model Integration</i>. Software Engineering Institute.</p>
-<p>Deloitte. (2021). <i>Aerospace & Defense supplier development practices: Operational excellence and capability frameworks</i>. Deloitte Insights.</p>
-<p>Embraer. (2022). <i>Supplier Excellence Program: Criteria for capability, quality and development</i>. Embraer S.A.</p>
-<p>European Space Agency. (2021). <i>Supplier capability and technology readiness assessment</i>. ESA.</p>
-<p>European Union Aviation Safety Agency. (2020). <i>ARP4754A & ARP4761: Guidelines for aircraft and systems development and safety assessment</i>. EASA/SAE International.</p>
-<p>International Aerospace Quality Group. (2021). <i>AS9100D: Quality Management Systems—Requirements for Aviation, Space and Defense Organizations</i>. IAQG.</p>
-<p>International Aerospace Quality Group. (2021). <i>AS9110 & AS9120 series: Quality requirements for maintenance and supply chain</i>. IAQG.</p>
-<p>ISO. (2019). <i>ISO 9001: Quality management systems—Requirements</i>. International Organization for Standardization.</p>
-<p>ISO. (2021). <i>ISO 56002: Innovation management—Guidance</i>. International Organization for Standardization.</p>
-<p>KPMG. (2022). <i>Aerospace supply chain resilience and performance frameworks</i>. KPMG International.</p>
-<p>Lockheed Martin. (2021). <i>Global Supply Chain: Supplier rating and capability assessment</i>. Lockheed Martin Corporation.</p>
-<p>McKinsey & Company. (2023). <i>Operational excellence in aerospace supply chains</i>. McKinsey Global Institute.</p>
-<p>NASA. (2020). <i>Supplier assessment and capability evaluation process</i>. NASA.</p>
-<p>NASA. (2020). <i>Technology readiness framework (TRL)</i>. National Aeronautics and Space Administration.</p>
-<p>Oliver Wyman. (2021). <i>Aviation and aerospace manufacturing capability assessment</i>. Oliver Wyman Consulting.</p>
-<p>Performance Review Institute. (2022). <i>NADCAP: Special process accreditation program overview</i>. PRI.</p>
-<p>PwC. (2021). <i>Supply Chain Maturity Model for aerospace suppliers</i>. PricewaterhouseCoopers.</p>
-<p>Raytheon Technologies. (2022). <i>Supplier Excellence and Risk Assessment (SERA) manual</i>. RTX Corporation.</p>
-<p>Rolls-Royce. (2021). <i>Supplier quality management system requirements</i>. Rolls-Royce plc.</p>
-<p>RTCA. (2011). <i>DO-254: Design assurance guidance for airborne electronic hardware</i>. Radio Technical Commission for Aeronautics.</p>
-<p>RTCA. (2012). <i>DO-178C: Software considerations in airborne systems and equipment certification</i>. Radio Technical Commission for Aeronautics.</p>
-<p>Smart Manufacturing Institute. (2021). <i>Smart Manufacturing Maturity Model (SMM)</i>. Manufacturing USA.</p>
-<p>United Kingdom Aerospace Growth Partnership. (2020). <i>Supplier capability and competitiveness toolkit</i>. UK Government.</p>
+    <!-- PANEL LATERAL -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="material-icons sidebar-logo-icon">dashboard</span>
+            <span class="sidebar-title">Panel CAESCOL</span>
+        </div>
 
-</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-link">
+                <span class="material-icons">arrow_back</span>
+                <span>Volver al Inicio</span>
+            </a>
 
+            <a href="Glosario técnico.html" class="sidebar-link">
+                <span class="material-icons">menu_book</span>
+                <span>Glosario Técnico</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <button class="icon-button" id="sidebarToggle">
+                <span class="material-icons">menu</span>
+            </button>
+            <span class="navbar-title">Referencias Citadas – CAESCOL</span>
+        </div>
+
+        <div class="navbar-right">
+            <span class="dark-mode-label">Modo oscuro</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+
+        <div class="header">
+            <img src="logo.png" class="logo-glow" alt="Logo CAESCOL">
+            <div class="header-title">Referencias Citadas</div>
+        </div>
+
+        <div class="texto-intro">
+            A continuación se presentan las fuentes consultadas para la construcción del glosario,
+            los modelos de evaluación y los lineamientos técnicos utilizados en la caracterización empresarial.
+        </div>
+
+        <h2>Listado de Referencias</h2>
+
+        <div class="form-wrapper" style="padding: 20px; background: rgba(255,255,255,0.15); border-radius: 12px;">
+
+            <p>Airbus. (2023). <i>Supplier Quality Improvement Program (SQIP)</i>.</p>
+            <p>Accenture. (2022). <i>A&D supply chain maturity and resilience model</i>.</p>
+            <p>Aerospace Industries Association. (2021). <i>Supplier capability guidelines</i>.</p>
+            <p>Aéro Montréal. (2022). <i>Supplier Development Program</i>.</p>
+            <p>Boeing. (2022). <i>Supplier Performance Measurement System</i>.</p>
+            <p>CMMI Institute. (2020). <i>CMMI V3.0</i>.</p>
+            <p>Deloitte. (2021). <i>Aerospace & Defense supplier development practices</i>.</p>
+            <p>Embraer. (2022). <i>Supplier Excellence Program</i>.</p>
+            <p>ESA. (2021). <i>Technology readiness assessment</i>.</p>
+            <p>EASA. (2020). <i>ARP4754A & ARP4761</i>.</p>
+            <p>IAQG. (2021). <i>AS9100D</i>.</p>
+            <p>ISO. (2019). <i>ISO 9001</i>.</p>
+            <p>KPMG. (2022). <i>Aerospace supply chain resilience</i>.</p>
+            <p>Lockheed Martin. (2021). <i>Supplier rating and capability assessment</i>.</p>
+            <p>McKinsey. (2023). <i>Operational excellence in aerospace supply chains</i>.</p>
+            <p>NASA. (2020). <i>Supplier assessment process</i>.</p>
+            <p>NASA. (2020). <i>Technology readiness framework (TRL)</i>.</p>
+            <p>Oliver Wyman. (2021). <i>Aerospace manufacturing capability assessment</i>.</p>
+            <p>PWC. (2021). <i>Supply Chain Maturity Model</i>.</p>
+            <p>Raytheon. (2022). <i>SERA manual</i>.</p>
+            <p>Rolls-Royce. (2021). <i>Supplier quality requirements</i>.</p>
+            <p>RTCA. (2011). <i>DO-254</i>.</p>
+            <p>RTCA. (2012). <i>DO-178C</i>.</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        © 2025 – CAESCOL | Referencias Técnicas
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
